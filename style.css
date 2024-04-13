@@ -1,0 +1,193 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2980b9, #6dd5fa, #ffffff);
+  background-size: 600% 600%;
+  animation: gradientBG 10s ease infinite;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 40px;
+  width: 400px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="number"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #3498db;
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button i {
+  margin-right: 5px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2980b9;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #3498db;
+  background-color: #f2f2f2;
+}
+
+/* CSS styles for radio buttons */
+.radio-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.radio-container label {
+  margin-right: 10px;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+  /* Hide the actual radio buttons */
+}
+
+/* Style for the custom radio buttons */
+.radio-container .custom-radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-container .custom-radio::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #3498db;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  /* Initially scale down */
+  transition: transform 0.3s ease;
+}
+
+/* When radio button is checked, scale up */
+.radio-container input[type="radio"]:checked+.custom-radio::after {
+  transform: translate(-50%, -50%) scale(1);
+
+}
+
+/* Styling for social media icons */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icons a {
+  color: #3498db;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #2980b9;
+}
