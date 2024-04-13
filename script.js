@@ -17,10 +17,10 @@ function calculateGPA() {
   var row = table.insertRow(-1);
   var gradeCell = row.insertCell(0);
   var creditCell = row.insertCell(1);
-  var deleteCell = row.insertCell(2); // إضافة خلية للمسح
+  var deleteCell = row.insertCell(2);
   gradeCell.innerHTML = gradeInput;
   creditCell.innerHTML = creditInput;
-  deleteCell.innerHTML = '<button onclick="deleteCourse(this)"><i class="fas fa-times"></i></button>'; // إضافة زر المسح
+  deleteCell.innerHTML = '<button onclick="deleteCourse(this)"><i class="fas fa-times"></i></button>';
 
   document.getElementById("grade").value = "";
   document.getElementById("credit").value = "";
